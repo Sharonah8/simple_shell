@@ -71,16 +71,24 @@ void set_env(char *name, char *value, data_shell *datash)
  *
  * Return: 1 on success.
  */
-int _sete`nv(data_shell *datash)
+int _setenv(data_shell *datash)
 {
 	if (datash->args[1] == NULL || datash->args[2] == NULL)
+
 	{
+
 		get_error(datash, -1);
+
 		return (1);
+
 	}
 
+
+
 	set_env(datash->args[1], datash->args[2], datash);
+
 	return (1);
+
 }
 
 /**
@@ -92,29 +100,40 @@ int _sete`nv(data_shell *datash)
  */
 
 int _unsetenv(data_shell *datash)
+
 {
+
 	char **realloc_environ;
-	char *var_env, *name_ev;
+
+	char *var_env, *name_env;
+
 	int i, j, k;
 
+
+
 	if (datash->args[1] == NULL)
+
 	{
+
 		get_error(datash, -1);
+
 		return (1);
+
 	}
+
 	k = -1;
 
 	for (i = 0; datash->_environ[i]; i++)
+
 	{
+
 		var_env = _strdup(datash->_environ[i]);
 		name_env = _strtok(var_env, "=")
 		if (_strcmp(name_env, datash->ags[1]) == 0)
-		{
-		k = i;
-		}
+			k = i;
+	}
 	free(var_env);
 	if (k == -1)
-	{
 		get_error(datash, -1);
 		return (1);
 	}

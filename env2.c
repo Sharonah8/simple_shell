@@ -53,7 +53,7 @@ void set_env(char *name, char *value, data_shell *datash)
 		if (_strcmp(name_env, name) == 0)
 		{
 			free(datash->_environ[i]);
-			datash->_environ[i] = copy_info(name_env, value)
+			datash->_environ[i] = copy_info(name_env, value);
 			free(var_env);
 			return;
 		}
@@ -128,12 +128,13 @@ int _unsetenv(data_shell *datash)
 	{
 
 		var_env = _strdup(datash->_environ[i]);
-		name_env = _strtok(var_env, "=")
-		if (_strcmp(name_env, datash->ags[1]) == 0)
+		name_env = _strtok(var_env, "=");
+		if (_strcmp(name_env, datash->args[1]) == 0)
 			k = i;
 	}
 	free(var_env);
 	if (k == -1)
+	{
 		get_error(datash, -1);
 		return (1);
 	}

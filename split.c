@@ -116,7 +116,7 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 			if (ls_s->separator == '&')
 				ls_l = ls_l->next, ls_s = ls_s->next;
 		}
-		if (ls_s != NULL && !loop sep)
+		if (ls_s != NULL && !loop_sep)
 			ls_s = ls_s->next;
 	}
 

@@ -1,2 +1,2 @@
-#A simple Shell
-Project that depicts a C command shell done collaboratively
+# A Simple Shell
+Depicting a UNIX shell command in our own way collaboratively.

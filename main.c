@@ -1,7 +1,5 @@
 #include "main.h"
 
-
-
 /*
  * free_data - frees data structure
  *

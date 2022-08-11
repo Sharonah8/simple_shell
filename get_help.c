@@ -1,4 +1,3 @@
-
 #include "main.h"
 
 /**
@@ -6,6 +5,7 @@
  * @datash: data structure (args and input)
  * Return: Return 0
  */
+
 int get_help(data_shell *datash)
 {
 
@@ -33,3 +33,4 @@ int get_help(data_shell *datash)
 	datash->status = 0;
 	return (1);
 }
+
